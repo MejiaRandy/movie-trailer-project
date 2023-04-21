@@ -1,0 +1,51 @@
+{{#if movies}}
+
+<div class="square">
+          <div class="header">
+            <table class="table" cellpadding="0" cellspacing="0">
+              <thead>
+                <tr class="rows">
+                <th>N.</th>
+                <th>Titulo</th>
+                <th>Año</th>
+                <th>Director</th>
+                <th>Actores</th>   
+                
+                <th>operaciones</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+          <div class="tablebody">
+            <table cellpadding="0" cellspacing="0">
+              <tbody id="cuerpo">
+                {{#each movies}}
+    <tr>
+    <td>{{@index}}</td>
+    <td>{{titulo}}</td>
+    <td>{{ano}}</td>
+    <td>{{director}}</td>
+    <td>{{actores}}</td>
+
+    <td>
+    {{#if done}}
+    <a href="/movie/{{_id}}/toggleDone" class="btn1">Undone</a>
+    {{else}}
+    <a href="/movie/{{_id}}/toggleDone" class="btn2">Done</a>
+    {{/if}}
+    <a href="/movie/{{_id}}/delete" style="text-decoration: none;"class="btn3"><span>Delete</span></a>
+    <a href="/movie/{{_id}}/edit" style="text-decoration: none;" class="btn4"><span>Edit</span></a>
+    </td>
+    </tr>
+    {{/each}}
+    </tbody>
+              </tbody>
+            </table>
+          </div>
+          {{else}}
+    <div>
+        <h1 class="text-center">Aun no hay nada aqui!</h1>
+        <img src="" alt="">
+    </div>
+    {{/if}}
+   

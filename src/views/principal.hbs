@@ -1,0 +1,33 @@
+    <header class="header32" id="inicio32">
+      <div class="contenedor32 head32">
+        <h1 class="titulo32">movie trailers</h1>
+        <button class="logIn32" onclick="location.href='#llegar'">
+        comenzar
+        </button>
+      </div>
+    </header>
+
+<h1 class="titulo">LISTA DE PELICULAS</h1>
+<div class="contentsssss" id="llegar">
+  
+    {{#each movies}}
+    {{#if done}}
+      <div class="cardsssss" >
+        <div class="frontWebsssss" style="background-image: url({{imagen}});"> 
+          <p>{{titulo}}</p>
+        </div>
+
+        <div class="backsssss">
+          <div>
+            <div class="release_datessss">{{titulo}} <span>{{ano}}</span></div>
+            <div></div>
+            
+            <p class="overviewsss">{{resena}}</p>
+            <a href="/movie/{{_id}}/view" class="buttonsss">ver ahora</a>
+          </div>
+        </div>
+      </div>
+      {{/if}}
+  {{/each}}
+  
+</div>

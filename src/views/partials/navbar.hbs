@@ -1,0 +1,39 @@
+{{#if si}}
+
+        <nav class="nav">
+            <a href="/" class="logo" style="text-decoration: none;"><h1>Movie<span>Trailers</span></h1></a> 
+            <div class="end-bx">
+                <ul>
+                    <li><a href="/" >Home</a></li>
+                    <li><a href="../../index">Registro de Trailers</a></li>
+                    <li><a href="about">About</a></li>
+                    <li><a href="/login/logout">logout</a></li>
+                </ul>
+                <div class="search">
+                    <input type="text" placeholder="Search Trailers....." id="search">
+                    <i class="fas fa-search" id="search_icon"></i>
+                </div>
+                <div class="bell">
+                    <i class="fas fa-bell"></i>
+                </div>
+            </div>
+        </nav>
+        {{else}}
+        <nav class="nav">
+            <a href="/" class="logo" style="text-decoration: none;"><h1>Movie<span>Trailers</span></h1></a> 
+            <div class="end-bx">
+                <ul>
+                    <li><a href="/" >Home</a></li>
+                    <li><a href="../../about">About</a></li>
+                    <li><a href="login">login</a></li>
+                </ul>
+                <div class="search">
+                    <input type="text" placeholder="Search Trailers....." id="search">
+                    <i class="fas fa-search" id="search_icon"></i>
+                </div>
+                <div class="bell">
+                    <i class="fas fa-bell"></i>
+                </div>
+            </div>
+        </nav>
+        {{/if}}
